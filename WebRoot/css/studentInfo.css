@@ -1,0 +1,51 @@
+/* CSS Document */
+#main{
+	width:1000px;
+	margin:0 auto;
+}
+#in,#out{
+	margin-bottom:20px;
+	margin-top:20px;
+	margin-left:100px;
+	float:left;
+}
+
+#file_in{
+	
+	width:133px;
+}
+#add_in{
+	
+}
+
+#search{
+	clear:left;
+}
+
+.search_look{
+	width:1020px;
+}
+.search_look ul{
+	list-style-type:none;
+	
+}
+.search_look ul li{
+	float:left;
+	width:220px;
+}
+
+#info_sure{
+	width:60px;
+	margin-top:-3px;
+}
+#info_search{
+	margin-left:20px;
+}
+#main_table{
+	clear:left;
+	margin-top:20px;
+	display:none;
+}
+#table{
+	
+}

@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-size:14px;font-family:Arial, Helvetica, sans-serif;}
+.clear{clear:both;}
+
+/*********头部信息*************/
+.header{
+	width:96%;
+	height:100px;
+	margin:6px auto;
+	background:url(../img/header_bg.png) repeat-x 0 0;
+}
+.header img{width:1000px;height:100px; }
+.menu{
+	width:96%; 
+	height:30px;
+	background:#69C;
+	margin:0 auto;
+	font-size:12px;
+	line-height:30px;
+}
+.menu_left{float:left;}
+.menu_left img{width:24px;height:24px;margin:2px;vertical-align:middle;}
+.menu_right span a{line-height:28px;vertical-align:middle;}
+.menu_right{float:right;margin-right:10px;font-size:14px;}
+
+/*********主体部分*************/
+.container{clear:both;width:96%;height:auto;margin:8px auto;}
+/*********左边导航部分*************/
+.side{
+	width:15%;
+	height:auto;
+	float:left;
+	
+}
+
+
+.box{width:194px;margin:0 auto;border:1px solid #06F;}
+ul,li{list-style:none;}
+.level1 a{
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    background:#EBF3F8;
+	font-weight:800;
+    color: #5893B7;
+	text-indent: 14px;
+	border-top: 1px solid #C4D5DF;
+}
+.level1 a{text-decoration:none;}
+.level1 a.current{background:#B1D7EF;}
+.navigation li ul{overflow:hidden;}
+.navigation li ul.level2{display:none;}
+.level2 li a{
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    background:#ffffff;
+	font-weight:400;
+    color: #42556B;
+	text-indent: 18px;
+	border-top: 0px solid #ffffff;
+    overflow: hidden;
+}
+.level2 li a:hover{
+	color:#f60;
+}
+.navigation li .level1 a .current{background:#B1D7EF;}
+
+.navigation li level2 a{display:none;}
+
+/*********中间主要部分*************/
+.main{
+	width:84%;
+	height:450px;
+	border:1px solid #06F;
+	float:right;
+}
+
+/*********footer部分*************/
+.footer{
+	font-size:12px;
+	margin:8px 0;
+}
+
+
+	
+
+
+

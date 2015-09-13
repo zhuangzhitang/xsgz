@@ -1,0 +1,127 @@
+/* CSS Document */
+
+		body,div,p,h1,h3,h4,h5,ul,li,img{
+			margin:0;
+			padding:0;
+	
+		}
+		body{
+			font-family:"微软雅黑";
+			font-size:14px;
+		}
+		#hidebg {
+    		position:absolute;
+			left:0px;
+			top:0px;
+      		background-color:#000;
+      		width:100%;  /*�������Ϊ100%���������ʹ���ر����㸲��ԭҳ��*/
+      		filter:alpha(opacity=60);  /*����͸����Ϊ60%*/
+     		opacity:0.3;  /*��IE�����������͸����Ϊ60%*/
+      		display:none; /* http://www.jb51.net */
+      		z-Index:3;}
+		
+		.header{
+			background:#08636E;
+			width:100%;
+			height:100px;
+			padding-left:5em;
+		}
+		#z_index{
+			display:inline;
+			background-color:RGB(154,0,0);
+			float:right;
+			width:215px;
+			height:100px;
+			font-size:14px;
+			position:absolute;
+			z-index:2;
+			line-height:2em;
+			padding-left:5px;
+			padding-top:5px;
+			color:#fff;
+			position:absolute;
+			
+		}
+		#title_main{
+			border-bottom:1px dashed blue;
+			width:800px;
+			margin:0 auto;
+			text-align:center;
+			margin-top:40px;
+		}
+		#title_main p{
+			margin-bottom:0px;
+			margin-left:0px;
+			
+		}
+		.class_name{
+			float:left;
+			width:130px;
+			height:16px;
+			
+		}
+		#main{
+			height:160px;
+			width:800px;
+			margin:0 auto;
+			margin-top:10px;
+		}
+		ul{
+			list-style-type:none;
+		}
+		
+		li{
+			height:190px;
+			float:left;
+			margin-top:10px;
+		}
+		.img_name{
+			display:block;
+			width:140px;
+			margin:0 auto;
+			margin-bottom:3px;
+			font-size:14px;
+			text-align:center;
+		}
+		.input_info{	
+		}
+		#main img{
+			margin-left:28px;
+			margin-right:28px;
+		}
+		
+		 a:hover img{
+			height:155px;
+			width:125px;
+			border:3px solid #DBFAFD;
+			
+		}
+		
+		#footbutton{
+			clear:both;
+			width:800px;
+			margin:0 auto;
+			text-align:center;
+			margin-top:25px;
+		}
+		#save{
+			width:100px;
+			height:30px;
+			background-color:#08636E;
+			color:#fff;
+			font-size:15px;
+			border-radius:3px;
+			margin-top:20px;
+		}
+		
+		 #hidebox { 
+		 position:absolute;
+		 width:600px;
+		 height:400px;
+		
+		 background-color:#fff;
+		 display:none;
+		 cursor:pointer;
+		 z-Index:3;
+		 }
+	

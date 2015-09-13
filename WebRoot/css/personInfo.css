@@ -1,0 +1,48 @@
+/* CSS Document */
+
+body{
+	 position: relative;
+	font-family:Arial, Helvetica, sans-serif;
+	
+}
+table {
+	background-color: #fff;
+	width:1140px;
+	height:300px;
+	-moz-text-size-adjust:none;
+	-ms-text-size-adjust:none;
+	-o-text-size-adjust:none;
+	-webkit-text-size-adjust:none;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;	 
+}
+
+td{
+	height:40px;
+}
+.trbg1,.file_info {
+	text-align: center;
+	width:10%;
+}
+
+tr,.table_text1,textarea {
+	background-color: #E0ECFF;
+	text-align: center;
+}
+input,textarea {
+	width: 90%;
+	height: 40px;
+	-webki-border: none;
+	border:none;
+	outline:none;
+	font-size:17px;
+}
+#table_button{
+	padding-left:10px;
+}
+#save{
+	margin-right:15px;
+}

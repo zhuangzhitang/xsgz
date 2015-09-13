@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package namespace="/admin/system" name="system"  extends="struts-default">
+        <action name="admin_*" class="cn.gdou.xsgz.admin.system.AdminAction" method="{1}" />          
+    </package>
+    
+    <!-- 此处若以/admin/system为namespace，则会被LoginFilter拦截到导致又跳回管理员登录页面，
+                  故把管理员的【登录】、【退出】拿出来放到/命名空间下  -->
+	<package namespace="/" name="admin" extends="struts-default">
+		<action name="adminLogin" class="cn.gdou.xsgz.admin.system.AdminAction" method="login">
+			<result name="success" type="redirect">
+			  <param name="location">/admin/index.jsp</param>
+			</result>
+			<result name="input" type="redirect">/index.jsp</result>
+		</action>		
+		<action name="adminExit" class="cn.gdou.xsgz.admin.system.AdminAction" method="exit">
+			<result name="input" type="redirect">/index.jsp</result>
+		</action>		
+	</package>
+
+</struts>

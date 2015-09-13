@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+
+	<package namespace="/admin/base" name="base"  extends="struts-default">
+        <action name="academy_*" class="cn.gdou.xsgz.admin.base.AcademyAction" method="{1}">
+            
+        </action>       
+        
+        <action name="major_*" class="cn.gdou.xsgz.admin.base.MajorAction" method="{1}">
+        </action>
+        
+        <action name="class_*" class="cn.gdou.xsgz.admin.base.ClassAction" method="{1}">
+        </action>
+        
+        <action name="studentInfo_*" class="cn.gdou.xsgz.admin.base.StudentInfoAction" method="{1}">
+        	<interceptor-ref name="fileUpload">
+        		
+        		<!-- 10M -->
+        		<param name="maximumsize">10000000</param>
+        	</interceptor-ref>
+        	<interceptor-ref name="defaultStack"></interceptor-ref>
+        	<result name="infos">/admin/base/personInfo.jsp</result>
+        	<result name="showStudent">/admin/base/showStudent.jsp</result>
+        	<result name="studentInfo">/admin/base/studentInfo.jsp</result>
+        	<result name="studentScore">/admin/base/personScore.jsp</result>
+        	<result name="studentPoint">/admin/base/personPoint.jsp</result>
+        </action>
+        <!-- 修改个人信息 -->
+         <action name="studentInfo1_*" class="cn.gdou.xsgz.admin.base.StudentInfoAction" method="{1}">
+        	<interceptor-ref name="fileUpload">
+        		
+        		<!-- 10M -->
+        		<param name="maximumsize">10000000</param>
+        	</interceptor-ref>
+        	<interceptor-ref name="defaultStack"></interceptor-ref>
+        	<result name="infos">/admin/base/studentInfo.jsp</result>
+        </action>
+	</package>
+	
+</struts>

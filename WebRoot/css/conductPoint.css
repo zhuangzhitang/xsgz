@@ -1,0 +1,67 @@
+/* CSS Document */
+
+#main{
+         width:1200px;
+         height:20px;
+	     margin-bottom:30px;
+	     margin-top:1em;    
+  }
+
+h2{
+	margin-left:36px;
+}
+
+#add{
+	
+}
+#search{
+	
+}
+#search ul,#point ul{
+	list-style-type:none;
+}
+#search ul li,#point ul li{
+	float:left;
+	width:250px;
+	
+}
+
+#info_sure,#info_sure1{
+	margin-top:-3px;
+	margin-left:-20px;
+}
+#main_table{
+	clear:both;
+}
+#littlewindow{
+	clear:none;
+	display:none;
+	font-size:16px;
+	margin:0 auto;
+}
+
+#littlewindow ul{
+	list-style-type:none;
+}
+#littlewindow ul li{
+	height:35px;
+}
+.info_text{
+	border:1px solid #99CCFF;
+	height:20px;
+}
+
+#year{
+	margin-left:80px
+}
+
+#little_button{
+	margin-left:189px
+}
+
+
+#point{
+	margin-top:30px;
+	height:100px;
+	width:1200px
+}

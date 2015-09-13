@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-size:14px;font-family:Arial, Helvetica, sans-serif;}
+.clear{clear:both;}
+
+/*********头部信息*************/
+.header{
+	width:100%;
+	height:100px;
+	margin:1px auto;
+	background:url(../img/header_bg.png) repeat-x 0 0;
+}
+.header img{width:1000px;height:100px; }
+
+.tip{
+	width:100%; 
+	height:24px;
+	background:#69C;
+	float:right;
+	margin:2px auto;
+	font-size:14px;
+	line-height:24px;
+}
+
+/*********主体部分*************/
+.easyui-accordion ul
+{
+    list-style-type: none;
+    margin: -5px -10px;
+    padding: 2px 0 0 2px;
+}
+.easyui-accordion ul li
+{
+    padding:0;
+    display: block;
+	margin: 3px;
+	border: 1px solid #CCC;
+	margin-top: 3px;
+	background: #E0ECFF;
+}
+.easyui-accordion ul li a
+{
+	padding:0  8px;
+    line-height: 24px;
+    display:block;
+}
+.easyui-accordion ul li a.hover
+{
+    border: 1px dashed #91BDE9;
+    background: #017CB7;
+    cursor: pointer;
+    color:#fff;
+    display:block;
+    text-decoration:none;
+}
+.easyui-accordion ul li a.hover a
+{
+    color: #017CB7;
+}
+.easyui-accordion ul li a.selected
+{
+    border: 1px solid #99BBE8;
+    background: #017CB7;
+    color:#E0ECFF;
+}
+.easyui-accordion ul li a.selected a
+{
+    color: #416AA3;
+    font-weight: bold;
+}
+.easyui-accordion a:hover{
+	text-decoration:none;
+	font-size:15px;
+	color:#017CB7;
+}
+..validatebox-invalid{background-image:none;}
+
+
+
+	
+
+
+

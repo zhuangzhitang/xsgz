@@ -1,0 +1,42 @@
+/* CSS Document */
+
+body{
+	margin-top:50px;
+	
+}
+
+#title{
+	width:480px;
+	margin:0 auto;
+	text-align:center;
+}
+
+#maintitle{
+	width:480px;
+	border-bottom:1px dashed #000;
+	margin:0 auto;
+	
+}
+#main{
+	width:480px;
+	margin:0 auto;
+	text-align:center;
+}
+
+ul{
+	list-style-type:none;
+}
+.info{
+	margin-left:-45px;
+}
+
+li{
+	height:30px;
+}
+
+#footbutton{
+	width:480px;
+	margin:0 auto;
+	text-align:center;
+}
+

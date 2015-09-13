@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+div,p,img,ul,li,hr{
+	margin:0;
+	padding:0;
+	}
+.all{
+	width:80%;
+	margin:0 auto;
+	}
+.navHead{
+	background:#4FA9FB;
+	width:100%;
+	
+	text-align:center;
+	margin:0 auto;
+	
+	}
+.navHead ul{
+	text-align:center;
+	margin:0 auto;
+	}
+.navHead ul li{
+	list-style:none;
+	display:inline-block;
+	margin:0.3em 0.5em 0 0.5em;
+	padding:0.5em 1em;
+	color:white;
+	font-weight:bolder;
+	
+	}
+.navHead ul li:hover{
+	background:#68C0D2;
+	color:#36C;
+	border-radius:0.5em 0.5em 0 0;
+	}
+#location{
+	clear:both;
+	border-radius:0.5em;
+	margin-top:0.2em;
+	background:#61B8F8;
+	padding-left:1em;
+	height:2em;
+	line-height:2em;
+	}
+#location p{
+	color:white;
+	font-weight:bolder;
+	display:inline-block;
+	
+	}
+.nav{
+	float:left;
+	margin-left:0.5em;
+	margin-top:0.2em;
+	background:#EBF3F8;
+	width:17%;
+	
+	}
+hr{
+	color:#5893B7;
+	}
+.nav ul{
+	
+	}
+.nav ul li{
+	padding-left:1em;
+	font-size:16px;
+	font-weight:bolder;
+	color:#5893B7;
+	padding:0.3em;
+	list-style:none;
+	text-align:center;
+	}
+.nav ul li:hover{
+	background:#5AA4E7;
+	color:white;
+	border-radius:0.3em;
+	}
+.liHover{
+		background:#5AA4E7;
+	color:white;
+	border-radius:0.3em;
+	}
+.main{
+	margin-right:0.3em;
+	margin-top:0.2em;
+	float:right;
+	width:80%;
+	height:30em;
+	border:1px dotted #63F;
+	}

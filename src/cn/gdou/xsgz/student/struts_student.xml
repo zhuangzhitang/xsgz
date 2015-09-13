@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+    
+	<package name="student"  extends="struts-default,json-default">
+	<!-- 学生登录处理action -->
+		<action name="studentLogin" class="cn.gdou.xsgz.student.StudentAction" method="login">
+			<result name="success" type="redirect">
+			  <param name="location">/student/index.jsp</param>
+			</result>
+			<result name="input" type="redirect">/index.jsp</result>
+		</action>		
+		
+		<action name="studentExit" class="cn.gdou.xsgz.student.StudentAction" method="exit">
+		    <result name="input" type="redirect">/index.jsp</result>
+        </action>   
+
+	<!-- 提交申请文档处理action -->
+        <action name="applySubmit" class="cn.gdou.xsgz.student.StudentAction" method="applyUpload">
+        	<interceptor-ref name="fileUpload">
+        		<param name="allowedTypes">application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document</param>
+        		<param name="maximumsize">10000000</param>
+        	</interceptor-ref>
+        	<interceptor-ref name="defaultStack"></interceptor-ref>
+        	
+        	<result name="success" type="redirect">/student/applySuccess.jsp</result>
+        	<!-- <result name="error" type="redirect">/student/applyError.jsp</result>  -->
+        	<result name="input" type="redirect">/student/applyError.jsp</result> 
+		</action>
+		
+	<!-- 获取下载文档列表action method="fileList" -->
+        <action name="getDownloadFiles" class="cn.gdou.xsgz.student.DownAction" method="getDownfileList">
+
+        	<result name="success" type="json">
+        		<param name="root">fileList</param>
+        	</result>
+        	<result name="input" type="redirect">/studentLogin.jsp</result>
+        	
+		</action>
+		
+<!--  获取下载文档列表action method="downFile"-->
+        <action name="download" class="cn.gdou.xsgz.student.DownAction" >
+
+        	<result type="stream">
+        	<!-- 二进制流类型 -->
+        		<param name="contentType">${resType}</param>
+        	<!--Action中返回输入流的方法	-->
+        		<param name="inputName">file</param>
+        	<!--二进制流类型  -->
+        		<param name="contentDisposition">fileName=${resName}</param>
+        	<!--文件下载时缓存大小  -->
+        		<param name="bufferSize">4096</param>
+        	</result>
+		</action>
+<!--	查看学生是否具有评定权限，有的话就进入评定页面。无，则提示无法进行评定  -->
+		<action name="StudentAction" class="cn.gdou.xsgz.student.StudentAction" 
+		method="ishavepermission">
+			<result name="success" type="dispatcher">/student/Poorstudents.jsp
+			</result>
+			<result name="error">
+				/success.jsp	
+			</result>
+		</action>
+		
+		<action name="GetResultAction" class="cn.gdou.xsgz.student.StudentAction" 
+		method="addtoStudent">
+			<result name="success" type="dispatcher">/student/index.jsp</result>
+			<result name="againvote" type="redirect">/student/Poorstudents.jsp</result>
+		</action>
+		
+	</package>
+	
+</struts>

@@ -1,0 +1,26 @@
+/* CSS Document */
+
+table{
+	background-color:#fff;
+}
+.trbg1,.file_info{
+	text-align:center;
+}
+tr,.table_text1,textarea{
+	
+	
+	background-color:#E0ECFF;
+	text-align:center;
+}
+input,textarea{
+	width:98%;
+	height:25px;
+	border:none;
+}
+
+.save,.edit{
+	background-color:#DFF1F2;
+	height:30px;
+	width:60px;
+	font-size:15px;
+	font-family:"Courier New", Courier, monospace;

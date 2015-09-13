@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<default-config>
+		<!-- 连接超时设置30秒 -->
+		<property name="checkoutTimeout">30000</property>
+		<!-- 检查一次connection的空闲 -->
+		<property name="idleConnectionTestPeriod">1800</property>
+		<!--初始化的池大小 -->
+		<property name="initialPoolSize">2</property>
+		<!-- 最多的一个connection空闲时间 -->
+		<property name="maxIdleTime">1800</property>
+		<!-- 最多可以有多少个连接connection -->
+		<property name="maxPoolSize">30</property>
+		<!-- 最少的池中有几个连接 -->
+		<property name="minPoolSize">2</property>
+		<!-- 批处理的语句  -->
+		<property name="maxStatements">50</property>
+		<!-- 每次增长几个连接 -->
+		<property name="acquireIncrement">2</property>
+		
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">
+			<![CDATA[jdbc:mysql://localhost:3306/xsgz?useUnicode=true&characterEncoding=UTF-8]]>
+		</property>
+		<property name="user">root</property>
+		<property name="password">04008</property>
+	</default-config> 
+</c3p0-config> 

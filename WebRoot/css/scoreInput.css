@@ -1,0 +1,39 @@
+/* CSS Document */
+
+
+
+body{
+	
+   font-family:helvetica,tahoma,verdana,sans-serif;
+}
+
+#main{
+}
+
+.title{
+	margin-top:17px;
+	
+	
+}
+span{
+	
+}
+table{
+	text-align:center;
+	margin:0 auto;
+	font-size:100%;
+}
+.tableText{
+	border:none;
+}
+#foot-button{
+	width:100%;
+	marign:0 auto;
+	text-align:center;
+	margin-top:1em;
+}
+#bn{
+	
+	width:100px;
+	height:25px;
+}

@@ -1,0 +1,31 @@
+/* CSS Document */
+
+#main_button ul li{
+	list-style-type:none;
+	float:left;
+	width:105px;
+	text-align:center
+	
+
+}
+#base_main{
+	clear:left;
+	margin-top:30px;
+	margin-left:40px;
+	
+}
+
+#main_score{
+	clear:left;
+	margin-top:30px;
+	margin-left:40px;
+	display:none;
+	
+}
+
+#main_poin{
+	clear:left;
+	margin-top:30px;
+	margin-left:40px;
+	display:none;
+}

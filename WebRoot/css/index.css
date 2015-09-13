@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,p,h1,h2,h3,h4,h5,ul,li,img{
+	margin:0;
+	padding:0;
+	
+	}
+body{
+	font-family:"微软雅黑";
+	font-size:14px;
+	}
+.header{
+	background:#08636E;
+	width:100%;
+	height:100px;
+	padding-left:5em;
+	}
+.menu{
+	float:right;
+	width:550px;;
+	margin-top:-2em;
+	margin-left:55%;
+	position:absolute;
+
+	}
+.menu_li{
+		
+}
+.menu li{
+	list-style:none;
+	display:inline-block;
+	color:white;
+	}
+.header:hover{
+	
+	}
+.header ul li a{
+	text-decoration:none;
+	color:white;
+	padding:0.3em 0.5em;
+	margin-right:1em;
+	}
+.header ul li a:hover{
+	text-decoration:none;
+	cursor:pointer;
+	background:white;
+	color:#08636E;
+	}
+.menu li ul{
+	list-style:none;
+	position:absolute;
+	background:#fff; 
+	width:150px;
+	display:none;
+	}
+.menu li ul li{
+	display:block;
+	padding:0.3em;
+	color:#08636E;
+	}
+.menu li ul li a{
+	color:#08636E;
+}
+.menu li ul li:hover,.menu li ul li a:hover{
+	color:white;
+	background:#08636E;
+	cursor:pointer;
+	}
+.content{
+	background:url(../images/1363068003816.jpg) round;
+	width:100%;
+	background-size:100%;
+	padding:3em;
+	}
+.main,.download,.attention{
+	width:940px;
+	margin:0em auto;
+	height:430px;
+	}
+#detail{
+	width:70%;
+	margin:0em auto;
+	min-height:430px;
+	background:white;
+	padding:2em;
+	}
+.part{
+	width:300px;
+	height:200px;
+	padding:1em 0.5em;
+	color:white;
+	text-align:center;
+	}
+.part:hover{
+	cursor:pointer;
+	opacity:1;
+	}
+.part1{
+	background:rgba(229, 198, 149, 0.6)!important;
+	filter:Alpha(opacity=60); background:#E5C695; /*　使用IE专属滤镜实现IE背景透明*/ 
+	}
+.part2{
+	
+	background:rgba(52, 122, 182, 0.6)!important;
+	filter:Alpha(opacity=60);
+	background:#347AB6;/**/
+	}
+.part3{
+	background:rgba(73, 199, 120, 0.6)!important;
+	filter:Alpha(opacity=60);
+	background:#49C779;
+	}
+.part4{
+	background:rgba(253, 91, 16, 0.6)!important;
+	filter:Alpha(opacity=60);
+	background:#FD5B10;
+	}
+.part5{
+	background:rgba(96, 185, 241, 0.4)!important;
+	filter:Alpha(opacity=60);
+	background:#60B9F1;
+	}
+.part6{
+	background:rgba(147, 59, 225, 0.4)!important;
+	filter:Alpha(opacity=60);
+	background:#933BFF;
+	}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+	padding: 8px;
+	line-height: 1.42857143;
+	vertical-align: top;
+	 border-top: 0;
+}
+.request{
+	margin-top:2em;
+	}
+	
+#applyDiv{
+	width:350px;
+	position:absolute;
+	top:40%;
+	left:40%;
+	}
+.close{
+	margin:0.5em;
+	}
+	
+#detail p{
+	text-indent:2em;
+	}
+	
+.footer{
+	width:100%;
+	height:70px;
+	background:#858585;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	line-height:70px;
+	
+	}
+/*密码修改*/
+#panel1{
+	width:350px;
+	height:190px;
+	background-color:#fff;
+	z-Index:3;
+	left:40%;
+	top:40%;
+	display:none;
+	position:absolute;
+	text-align:center;
+}
+#panel1 form input{
+	margin-bottom:10px;
+}
+#panel1 .panel1-heading{
+	width:350px;
+	height:40px;
+	background:RGB(66,139,202);
+	margin-bottom:10px;
+}
+
+/*贫困生添加框样式*/
+#addText1{
+	display:block;
+	margin-top:10px;
+	margin-bottom:10px;
+	
+}

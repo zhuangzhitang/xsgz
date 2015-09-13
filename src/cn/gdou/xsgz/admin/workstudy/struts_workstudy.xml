@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">	
+<struts>
+	<package namespace="/admin/workstudy" name="workstudy" extends="struts-default">
+		<action name="admin_*" class="cn.gdou.xsgz.admin.workstudy.ShowPoorStudentAction" 
+		method="{1}">
+		<result name="success">/student/succ.jsp</result>
+		<result name="showStudent">/student/showStudent.jsp</result>
+		</action>
+		<action name="todo_*" class="cn.gdou.xsgz.admin.workstudy.DealWithAllotAction" 
+		method="allotManyMoney">
+		</action>
+	</package>
+</struts>

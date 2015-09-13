@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package namespace="/admin/conductpoints" name="conductpoints"  extends="struts-default">
+        <action name="conduct_*" class="cn.gdou.xsgz.admin.conduct.ConductAction" method="{1}">
+        
+        </action>
+        <action name="conductOut_*" class="cn.gdou.xsgz.admin.conduct.ConductDataOutputAction" method="{1}">
+            <result name="download" type="stream">
+               <!-- 二进制流类型 -->
+        		<param name="contentType">application/vnd.ms-excel</param>
+        	<!--Action中返回输入流的方法	-->
+        		<param name="inputName">input</param>
+        	<!--二进制流类型  -->
+        		<param name="contentDisposition">fileName=${fileName}</param>
+        	<!--文件下载时缓存大小  -->
+        		<param name="bufferSize">4096</param>     
+            </result>
+        </action>
+	</package>
+	     
+	    
+</struts>

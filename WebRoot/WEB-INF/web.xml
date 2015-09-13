@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+  <!-- *************************  filter start  ************************* -->
+  
+  <!-- 字符编码过滤器 -->
+  <filter>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>cn.gdou.xsgz.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 验证过滤器 -->
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>cn.gdou.xsgz.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+    <url-pattern>/student/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 认证过滤器 -->
+  <filter>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>cn.gdou.xsgz.filter.AuthFilter</filter-class>      
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+    <url-pattern>/student/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>WorkStudyFilter</filter-name>
+    <filter-class>cn.gdou.xsgz.filter.WorkStudyFilter</filter-class>      
+  </filter>
+  <filter-mapping>
+    <filter-name>WorkStudyFilter</filter-name>
+    <url-pattern>/admin/workstudy/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- struts2 过滤器 -->
+  <filter> 
+    <filter-name>StrutsPrepareAndExecuteFilter</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>StrutsPrepareAndExecuteFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 压缩过滤器 -->
+  <filter>
+    <filter-name>GzipFilter</filter-name>
+    <filter-class>cn.gdou.xsgz.filter.GzipFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>GzipFilter</filter-name>
+    <servlet-name>checkCode</servlet-name>
+    <url-pattern>*.jsp|*.gdou</url-pattern>
+  </filter-mapping>
+  
+  <!-- *************************   filter end   ************************* -->
+  
+   
+  
+  <!-- *************************  servlet start ************************* -->
+  
+  <servlet>
+    <servlet-name>checkCode</servlet-name>
+    <servlet-class>cn.gdou.xsgz.util.ImageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>checkCode</servlet-name>
+    <url-pattern>/checkCode</url-pattern>
+  </servlet-mapping>
+  
+  <!-- *************************  servlet end   ************************* -->
+  
+  <!-- 定制首页 -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 定制“权限不足”页面 -->
+  <error-page>
+    <error-code>403</error-code>
+    <location>/ex/403.html</location>
+  </error-page>
+  
+  <!-- 定制“找不到资源”页面 -->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/ex/404.html</location>
+  </error-page>
+  
+  <!-- 定制“系统异常”页面 -->
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/ex/error.html</location>
+  </error-page>
+</web-app>

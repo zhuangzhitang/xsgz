@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+
+	<package namespace="/admin/scholarships" name="scholarships"  extends="struts-default">
+        <action name="scoreInput_*" class="cn.gdou.xsgz.admin.scholarships.ScoreInputAction" method="{1}">
+          <result name="fileupload" type="dispatcher">/admin/scholarships/scoreInput.jsp</result>
+         <result name="disCompareClass" type="dispatcher">/admin/scholarships/scoreInput.jsp</result>
+         <result name="fail" type="dispatcher">/admin/scholarships/scoreInput.jsp</result>
+         <result name="success" type="dispatcher">/admin/scholarships/scoreInput.jsp</result>
+           <interceptor-ref name="fileUpload">
+        		<!-- 10M -->
+        		<param name="maximumsize">10485760</param>	                          
+             </interceptor-ref>
+          
+             <!-- 在默认情况下，会引用defaultStack -->
+             <interceptor-ref name="defaultStack"/>
+         </action>
+         <action name="scholarships_*" class="cn.gdou.xsgz.admin.scholarships.ScholarshipsDataOutputAction" method="{1}">
+            <result name="download" type="stream">
+               <!-- 二进制流类型 -->
+        		<param name="contentType">application/vnd.ms-excel</param>
+        	<!--Action中返回输入流的方法	-->
+        		<param name="inputName">input</param>
+        	<!--二进制流类型  -->
+        		<param name="contentDisposition">fileName=${fileName}</param>
+        	<!--文件下载时缓存大小  -->
+        		<param name="bufferSize">4096</param>     
+            </result>
+         
+         </action>
+	</package>
+	
+</struts>

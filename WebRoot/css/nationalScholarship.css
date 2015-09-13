@@ -1,0 +1,26 @@
+/* CSS Document */
+
+*{
+	font-size:18px;
+}
+#sch ul li{
+	list-style-type:none;
+	height:30px;
+	margin-left:-20px;
+}
+
+
+.info_chex{
+	display:none;
+}
+.button{
+	margin-top:10px;
+	margin-left:20px;
+}
+
+#sure_buton{
+	display:none;
+}
+#out_buton{
+	display:none;
+}

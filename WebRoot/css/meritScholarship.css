@@ -1,0 +1,37 @@
+/* CSS Document */
+.search_look{
+	margin-top:1em;
+	width:1200px;
+}
+.search_look ul{
+	list-style-type:none;
+	
+}
+.search_look ul li{
+	float:left;
+	width:220px;
+	
+}
+
+#info_sure{
+	width:60px;
+	margin-top:-3px;
+}
+#main_table{
+	clear:left;
+	margin-left:40px;
+}
+
+#search_look1 li{
+	list-style-type:none;
+	height:30px;
+	
+	
+}
+#number{
+	margin-left:-32px;
+}
+#out{
+	margin-left:47px;
+	margin-top:8px;
+}
